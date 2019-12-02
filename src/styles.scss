@@ -9,3 +9,71 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   color: #666666;
 }
+
+h1 {
+  margin-top: 0;
+  font-family: 'Alfa Slab One', cursive;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 3rem;
+  span {
+    color: #ffd740;
+  }
+}
+
+button.mat-flat-button {
+  border-radius: 100px;
+  &.submit {
+    margin-top: 1rem;
+    font-size: 20px;
+    padding: 0.5rem 3rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    background-color: #ffd740;
+    color: #673ab7;
+  }
+}
+
+// Hamburger components
+$ingredients: (
+        "bread-black-bottom": 10%,
+        "bread-black-top": 12%,
+        "bread-classic-bottom": 10%,
+        "bread-classic-top": 12%,
+        "bread-sesame-bottom": 10%,
+        "bread-sesame-top": 12%,
+        "meat-chicken": 6%,
+        "meat-chicken-crispy": 12%,
+        "meat-beef-classic": 6%,
+        "meat-beef-overcooked": 6%,
+        "cheese-black": 1.7%,
+        "cheese-cheddar": 1.7%,
+        "cheese-classic": 1.7%,
+        "onions": 4.25%,
+        "pickles": 2.5%,
+        "salad": 3%,
+        "tomatoes": 5%,
+        "sauce-ketchup": 3%,
+        "sauce-mayonnaise": 3%,
+        "sauce-senape": 3%,
+);
+
+@each $ingredient, $heightPercent in $ingredients {
+  .ingredient.#{$ingredient} {
+    padding-top: $heightPercent;
+    position: relative;
+    transition: margin 0.5s ease-out;
+    will-change: margin;
+    .img {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 100%;
+      padding-top: 100%;
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("/assets/img/#{$ingredient}.png");
+    }
+  }
+}
