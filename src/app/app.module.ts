@@ -5,9 +5,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RootComponent } from './root/root.component';
+import { HamburgerComponent } from './widgets/hamburger/hamburger.component';
 
 @NgModule({
   declarations: [
+    HamburgerComponent,
     RootComponent,
   ],
   imports: [

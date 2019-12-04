@@ -1,0 +1,16 @@
+<div
+  class="hamburger"
+  [class.expanded]="expanded">
+  <div class="ingredient bread-{{ bread }}-bottom">
+    <div class="img"></div>
+  </div>
+  <div
+    *ngFor="let ingredient of ingredients"
+    class="ingredient"
+    [ngClass]="ingredient">
+    <div class="img"></div>
+  </div>
+  <div class="ingredient bread-{{ bread }}-top">
+    <div class="img"></div>
+  </div>
+</div>

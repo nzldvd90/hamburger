@@ -1,1 +1,11 @@
-<p>root-component works!</p>
+<div class="container">
+  <div class="col">
+    <app-hamburger
+      [expanded]="expanded"
+      [bread]="hs.bread"
+      [ingredients]="hs.ingredients"></app-hamburger>
+  </div>
+  <div class="col">
+    <router-outlet></router-outlet>
+  </div>
+</div>

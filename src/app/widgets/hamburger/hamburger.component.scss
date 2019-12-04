@@ -1,0 +1,17 @@
+.hamburger {
+  display: flex;
+  flex-flow: column-reverse;
+
+  &.expanded {
+    .ingredient {
+      margin: 20px 0;
+    }
+  }
+
+  .ingredient {
+    width: 480px;
+    &:last-child {
+      margin-top: 80px;
+    }
+  }
+}
