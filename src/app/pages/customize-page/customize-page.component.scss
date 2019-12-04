@@ -1,0 +1,22 @@
+.customization {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #CCCCCC;
+  margin-bottom: 1rem;
+
+  label {
+    width: 100px;
+    padding-right: 1rem;
+    display: block;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: right;
+  }
+
+  mat-checkbox + mat-checkbox {
+    margin-left: 1.5rem;
+  }
+}

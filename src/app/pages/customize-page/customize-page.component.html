@@ -1,0 +1,37 @@
+<h1>
+  Personalizza il
+  <br/>
+  tuo
+  <span>Hamburger</span>
+</h1>
+
+<div
+  *ngFor="let customization of customizations"
+  class="customization">
+  <label>{{ customization.label }}</label>
+  <ng-container *ngIf="customization.choices">
+    <button
+      *ngFor="let choice of customization.choices"
+      mat-flat-button
+      (click)="hs[customization.value] = choice.id"
+      [class.mat-primary]="choice.id === hs[customization.value]">
+      {{ choice.label }}
+    </button>
+  </ng-container>
+  <ng-container *ngIf="customization.options">
+    <mat-checkbox
+      *ngFor="let option of customization.options"
+      color="primary"
+      [(ngModel)]="hs[customization.value][option.id]">
+      {{ option.label }}
+    </mat-checkbox>
+  </ng-container>
+</div>
+
+<button
+  mat-flat-button
+  color="accent"
+  class="submit"
+  [routerLink]="['/complete']">
+  Completa
+</button>

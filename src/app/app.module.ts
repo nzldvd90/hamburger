@@ -4,12 +4,14 @@ import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { CustomizePageComponent } from './pages/customize-page/customize-page.component';
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
 import { RootComponent } from './root/root.component';
 import { HamburgerComponent } from './widgets/hamburger/hamburger.component';
 
 @NgModule({
   declarations: [
+    CustomizePageComponent,
     HamburgerComponent,
     RootComponent,
     WelcomePageComponent,
